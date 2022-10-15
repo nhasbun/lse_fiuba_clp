@@ -1,0 +1,246 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+# Date created = 21:22:19  octubre 09, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		vga_module_clp_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7
+set_global_assignment -name TOP_LEVEL_ENTITY top_module
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:22:19  OCTUBRE 09, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "QuestaSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 6
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_location_assignment PIN_W15 -to LED_ARRAY_OUT[0]
+set_location_assignment PIN_AA24 -to LED_ARRAY_OUT[1]
+set_location_assignment PIN_V16 -to LED_ARRAY_OUT[2]
+set_location_assignment PIN_V15 -to LED_ARRAY_OUT[3]
+set_location_assignment PIN_AF26 -to LED_ARRAY_OUT[4]
+set_location_assignment PIN_AE26 -to LED_ARRAY_OUT[5]
+set_location_assignment PIN_Y16 -to LED_ARRAY_OUT[6]
+set_location_assignment PIN_AA23 -to LED_ARRAY_OUT[7]
+set_location_assignment PIN_W20 -to RESET_IN
+set_location_assignment PIN_V11 -to CLK50_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HSYNC_OUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_ARRAY_OUT[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VSYNC_OUT
+set_location_assignment PIN_U10 -to HDMI_IIC_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_IIC_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_IIC_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_DE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HDMI_TX_INT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK50_IN
+set_location_assignment PIN_AA4 -to HDMI_IIC_SDA
+set_location_assignment PIN_AG5 -to HDMI_TX_CLK
+set_location_assignment PIN_AD19 -to HDMI_TX_DE
+set_location_assignment PIN_AF11 -to HDMI_TX_INT
+set_location_assignment PIN_T8 -to HSYNC_OUT
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RGB_OUT[0]
+set_location_assignment PIN_V13 -to VSYNC_OUT
+set_location_assignment PIN_AE8 -to RGB_OUT[23]
+set_location_assignment PIN_AF9 -to RGB_OUT[22]
+set_location_assignment PIN_AE9 -to RGB_OUT[10]
+set_location_assignment PIN_AG6 -to RGB_OUT[21]
+set_location_assignment PIN_AH6 -to RGB_OUT[20]
+set_location_assignment PIN_AH5 -to RGB_OUT[19]
+set_location_assignment PIN_AH4 -to RGB_OUT[18]
+set_location_assignment PIN_AH2 -to RGB_OUT[17]
+set_location_assignment PIN_AE4 -to RGB_OUT[16]
+set_location_assignment PIN_AF5 -to RGB_OUT[15]
+set_location_assignment PIN_AF8 -to RGB_OUT[14]
+set_location_assignment PIN_AF6 -to RGB_OUT[13]
+set_location_assignment PIN_AE7 -to RGB_OUT[12]
+set_location_assignment PIN_AB4 -to RGB_OUT[11]
+set_location_assignment PIN_AF10 -to RGB_OUT[8]
+set_location_assignment PIN_AE11 -to RGB_OUT[6]
+set_location_assignment PIN_AD10 -to RGB_OUT[5]
+set_location_assignment PIN_AD11 -to RGB_OUT[4]
+set_location_assignment PIN_AE12 -to RGB_OUT[1]
+set_location_assignment PIN_AD12 -to RGB_OUT[0]
+set_location_assignment PIN_Y4 -to RGB_OUT[9]
+set_location_assignment PIN_Y5 -to RGB_OUT[7]
+set_location_assignment PIN_Y8 -to RGB_OUT[3]
+set_location_assignment PIN_W8 -to RGB_OUT[2]
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE src/signal_tap.stp
+set_global_assignment -name VHDL_FILE src/vga_sync.vhd -hdl_version VHDL_2008
+set_global_assignment -name VHDL_FILE src/pattern_gen.vhd -hdl_version VHDL_2008
+set_global_assignment -name VHDL_FILE src/top_module.vhd
+set_global_assignment -name VERILOG_FILE src/hdmi_i2c_config/I2C_WRITE_WDATA.v
+set_global_assignment -name VERILOG_FILE src/hdmi_i2c_config/I2C_HDMI_Config.v
+set_global_assignment -name VERILOG_FILE src/hdmi_i2c_config/I2C_Controller.v
+set_global_assignment -name QIP_FILE src/pll_ip/pll_clk.qip
+set_global_assignment -name SDC_FILE src/timing_file.sdc
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to B_ENABLED_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to G_ENABLED_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to R_ENABLED_IN
+set_location_assignment PIN_W21 -to R_ENABLED_IN
+set_location_assignment PIN_W24 -to G_ENABLED_IN
+set_location_assignment PIN_Y24 -to B_ENABLED_IN
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[23]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[22]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[21]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[20]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[19]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[18]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[17]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[16]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RGB_OUT[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to VSYNC_OUT
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to B_ENABLED_IN
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to CLK50_IN
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to G_ENABLED_IN
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HDMI_IIC_SCL
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HDMI_IIC_SDA
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HDMI_TX_CLK
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HDMI_TX_DE
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HDMI_TX_INT
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to HSYNC_OUT
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to LED_ARRAY_OUT[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to R_ENABLED_IN
+set_instance_assignment -name CURRENT_STRENGTH_NEW 16MA -to RESET_IN
+set_instance_assignment -name SLEW_RATE 1 -to HDMI_IIC_SCL
+set_instance_assignment -name SLEW_RATE 1 -to HDMI_IIC_SDA
+set_instance_assignment -name SLEW_RATE 1 -to HDMI_TX_CLK
+set_instance_assignment -name SLEW_RATE 1 -to HDMI_TX_DE
+set_instance_assignment -name SLEW_RATE 1 -to HSYNC_OUT
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[7]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[6]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[5]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[4]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[3]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[2]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[1]
+set_instance_assignment -name SLEW_RATE 1 -to LED_ARRAY_OUT[0]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[23]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[22]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[21]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[20]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[19]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[18]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[17]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[16]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[15]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[14]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[13]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[12]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[11]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[10]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[9]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[8]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[7]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[6]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[5]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[4]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[3]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[2]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[1]
+set_instance_assignment -name SLEW_RATE 1 -to RGB_OUT[0]
+set_instance_assignment -name SLEW_RATE 1 -to VSYNC_OUT
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
